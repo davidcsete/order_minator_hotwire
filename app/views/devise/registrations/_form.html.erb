@@ -1,0 +1,44 @@
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |form| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="grid gap-6 mb-6 md:grid-cols-2">
+            <div>
+                <%= form.label :last_name, class:"label" %>
+                <%= form.text_field :last_name, class: "input input-bordered w-full max-w-xs" %>
+            </div>
+            <div>
+                <%= form.label :first_name, class:"label" %>
+                <%= form.text_field :first_name, class: "input input-bordered w-full max-w-xs" %>
+            </div>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+        </div>
+        <div class="mb-6">
+            <%= form.label :email, class:"label" %>
+            <%= form.text_field :email, class: "input input-bordered w-full max-w-xs" %>
+        </div>
+        <div class="mb-6">
+            <%= form.label :current_password, class:"label"  do %>
+                Current password
+                <i>(we need your current password to confirm your changes)</i>
+            <% end %>
+            <%= form.password_field :current_password, class: "input input-bordered w-full max-w-xs" %>
+        </div>
+        <div class="mb-6">
+            <%= form.label :password, class:"label" %>
+            <%= form.password_field :password, class: "input input-bordered w-full max-w-xs" %>
+        </div>
+        <div class="mb-6">
+            <%= form.label :password_confirmation, class:"label" %>
+            <%= form.password_field :password_confirmation, class: "input input-bordered w-full max-w-xs" %>
+        </div>
+        <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+            <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+            </div>
+            <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+        </div>
+
+        <%= form.submit "Update", class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+<% end %>

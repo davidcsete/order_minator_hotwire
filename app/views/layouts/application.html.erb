@@ -11,8 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body >
+    <%= render "layouts/nav_bar"%>
+    <main class="container mx-auto mt-10 px-2 grid">
+      <div class="inline">
+      <%= render "layouts/alert", alert: alert unless alert.nil? %>
+      <%= render "layouts/notice", notice: notice unless notice.nil? %>
+      </div>
       <%= yield %>
     </main>
   </body>

@@ -1,0 +1,10 @@
+<% if current_page?(controller: 'restaurants', action: 'show', id: restaurant.id) %>
+
+  <%= render "restaurants/restaurant/full_body", restaurant: restaurant %>
+
+<% else %>
+  <%= turbo_frame_tag restaurant do %>
+    <%= render "restaurants/restaurant/list_body", restaurant: restaurant %>
+  <% end %>
+<% end %>
+

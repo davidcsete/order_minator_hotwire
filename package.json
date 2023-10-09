@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "flowbite": "^1.8.1"
+    "daisyui": "^3.9.2",
+    "theme-change": "^2.5.0"
   }
 }

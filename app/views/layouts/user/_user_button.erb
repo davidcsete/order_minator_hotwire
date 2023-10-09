@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+    <%= render "layouts/user/sign_out_button"%>
+<% else %>
+    <%= render "layouts/user/sign_in_button"%>
+<% end %>
+

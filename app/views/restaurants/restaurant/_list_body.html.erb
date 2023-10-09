@@ -1,0 +1,17 @@
+<div class="card card-side bg-base-100 shadow-xl">
+  <figure>
+    <%= image_tag "base_card_image.jpg", class:"h-64 w-64" %>
+    </figure>
+  <div class="card-body">
+    <h2 class="card-title"><%= restaurant.name %></h2>
+    <p><%= restaurant.description %></p>
+    <div class="card-actions justify-end">
+        <%= button_to "Foods", restaurant_path(restaurant), {
+            data: { turbo_frame: "_top" },
+            class: "btn btn-primary",
+            method: :get
+        } %>
+
+    </div>
+  </div>
+</div>

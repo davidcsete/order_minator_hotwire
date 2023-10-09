@@ -1,0 +1,36 @@
+
+<nav>
+	<div class="navbar bg-base-100">
+		<div class="navbar-start">
+			<a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+		</div>
+		<div class="navbar-center">
+			<%= link_to 'Home', root_path, {class: "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500", "aria-current": "page"} %>
+		</div>
+		<div class="navbar-end flex-none gap-3">
+
+			<div class="form-control">
+				<input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+			</div>
+			<%= render "layouts/user/user_button"%>
+		</div>
+	</div>
+</nav>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		function changeTheme(){
+			if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.dataset.theme = 'orderMinatorDark';
+			} else {
+				document.documentElement.dataset.theme = 'orderMinatorLight';
+			}
+		}
+		changeTheme();
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    	if (event.matches) {
+				document.documentElement.dataset.theme = 'orderMinatorDark';
+			} else {
+				document.documentElement.dataset.theme = 'orderMinatorLight';
+			}
+		});
+</script>
