@@ -5,7 +5,9 @@ module.exports = {
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.{erb,haml,html,slim}',
+    './app/components/**/*.html.erb',
+    './app/components/**/*.rb'
   ],
   theme: {
     extend: {
@@ -25,7 +27,7 @@ module.exports = {
           "secondary": "#4db6ac",
           "accent": "#00a0e4",
           "neutral": "#333333",
-          "base-100": "#f0f0f0",
+          "base-100": "#f9f7f5",
           "info": "#3abff8",
           "success": "#36d399",
           "warning": "#fbbd23",
@@ -35,14 +37,14 @@ module.exports = {
       {
         orderMinatorDark: {
           "primary": "#ffa600",
-          "secondary": "#2e2e2e",
+          "secondary": "#00796B",
           "accent": "#4caf4f",
           "neutral": "#ffffff",
-          "base-100": "#212121",
+          "base-100": "#303030",
           "info": "#3abff8",
           "success": "#36d399",
           "warning": "#fbbd23",
-          "error": "#f87272",
+          "error": "#f87272"
         },
       },
     ],

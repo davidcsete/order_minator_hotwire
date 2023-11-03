@@ -1,11 +1,11 @@
 
 <nav>
-	<div class="navbar bg-base-100">
+	<div class="navbar bg-base-300">
 		<div class="navbar-start">
 			<a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 		</div>
 		<div class="navbar-center">
-			<%= link_to 'Home', root_path, {class: "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500", "aria-current": "page"} %>
+			<%= link_to 'Home', root_path, {class:  "#{current_page?(root_path) ? 'link-accent' : 'link-secondary'} font-semibold"} %>
 		</div>
 		<div class="navbar-end flex-none gap-3">
 

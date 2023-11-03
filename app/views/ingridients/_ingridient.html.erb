@@ -1,0 +1,37 @@
+<div id="<%= dom_id ingridient %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Kcalorie count:</strong>
+    <%= ingridient.kcalorie_count %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Protein count:</strong>
+    <%= ingridient.protein_count %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Carbohydrate count:</strong>
+    <%= ingridient.carbohydrate_count %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Fat count:</strong>
+    <%= ingridient.fat_count %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Weight in gramms:</strong>
+    <%= ingridient.weight_in_gramms %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= ingridient.description %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this ingridient", ingridient, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this ingridient', edit_ingridient_path(ingridient), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
