@@ -1,0 +1,13 @@
+<div class="carousel carousel-center max-w p-4 space-x-4 bg-neutral rounded-box h-96">
+    <% @slides.each_with_index do |slide, index| %>
+
+        <%= render(
+            Carousel::SlideComponent.new(
+                id: slide[:id],
+                next_slide: slide == @slides.last ?  @slides.first[:id] : @slides[index+1][:id],
+                previous_slide: slide == @slides.first ? @slides.last[:id] : @slides[index-1][:id],
+                img_src: slide[:img_src]
+                )) %>
+    <% end %>
+
+</div>

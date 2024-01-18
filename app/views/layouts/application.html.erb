@@ -8,16 +8,13 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body class="bg-base-200">
+  <body class="bg-base-200 grid">
     <%= render "layouts/nav_bar"%>
-    <main class="container mx-auto mt-10 px-2 flex flex-col">
+    <%= render "layouts/flash" %>
+    <main>
       <div class="inline">
-      <%= render "layouts/alert", alert: alert unless alert.nil? %>
-      <%= render "layouts/notice", notice: notice unless notice.nil? %>
       </div>
       <%= yield %>
     </main>

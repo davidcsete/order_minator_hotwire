@@ -4,6 +4,11 @@
     "@hotwired/turbo-rails": "^7.3.0",
     "daisyui": "^3.9.2",
     "esbuild": "^0.19.5",
+    "stimulus-carousel": "^5.0.1",
+    "stimulus-content-loader": "^4.2.0",
+    "stimulus-notification": "^2.2.0",
+    "stimulus-scroll-reveal": "^3.2.0",
+    "stimulus-use": "^0.52.1",
     "theme-change": "^2.5.0"
   },
   "scripts": {
