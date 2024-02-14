@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.user-frame,
+.admin-frame,
+.customer-frame {
+    display: none;
+}
+
+.user-frame.turbo-frame,
+.admin-frame.turbo-frame,
+.customer-frame.turbo-frame {
+    display: block;
+}

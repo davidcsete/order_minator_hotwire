@@ -1,6 +1,5 @@
 <div class="carousel carousel-center max-w p-4 space-x-4 bg-neutral rounded-box h-96">
     <% @slides.each_with_index do |slide, index| %>
-
         <%= render(
             Carousel::SlideComponent.new(
                 id: slide[:id],
